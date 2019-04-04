@@ -1,0 +1,29 @@
+#profile-section{
+    display: flex;
+    margin: 1rem;
+}
+
+#profile-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #666;
+}
+
+#personal-info{
+    display: inline-block;
+    list-style: none;
+    padding: 0 0 0 20px;
+}
+
+#personal-info li {
+    margin-bottom: 10px;
+}
+
+#personal-info li p{
+    margin: 0;
+}
+
+#name{
+    font-size: 1.5rem;
+}
