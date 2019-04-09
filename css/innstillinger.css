@@ -29,13 +29,14 @@
 }
 
 #settings-section {
-    padding: 1rem;
+    padding: 1rem 2.5rem 1rem 2.5rem;
 }
 
 #settings-title {
-    color: #333;
+    color: rgba(0,0,0,0.7);
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 0.915rem;
+    margin: 0;
 }
 
 #settings-list {
@@ -47,16 +48,20 @@
 #settings-list li a{
     color: #000;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 .settings-list-icon {
-    color: #666;
+    color: rgba(0,0,0,0.47);
     position: relative;
 }
 
 .settings-list-text {
     margin: 0 0 0 7px;
     position: relative;
+}
+
+.settings-list-icon.right {
+    float: right;
 }
 
