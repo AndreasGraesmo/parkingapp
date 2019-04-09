@@ -27,3 +27,36 @@
 #name{
     font-size: 1.5rem;
 }
+
+#settings-section {
+    padding: 1rem;
+}
+
+#settings-title {
+    color: #333;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+#settings-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#settings-list li a{
+    color: #000;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.settings-list-icon {
+    color: #666;
+    position: relative;
+}
+
+.settings-list-text {
+    margin: 0 0 0 7px;
+    position: relative;
+}
+
