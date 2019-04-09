@@ -1,0 +1,79 @@
+body{
+    font-family: "Helvetica neue", "helvetica", "arial", sans-serif;
+}
+
+/* 
+    Main container
+*/
+#app-container{
+    background-color: rgb(249, 244, 242);
+    height: 736px;
+    width:414px;
+    border-style: solid;
+    border-color: black;
+    border-bottom-width: 15px;
+    border-top-width: 15px;
+    border-left-width: 7px;
+    border-right-width: 7px;
+    border-radius: 20px;
+    margin: 60px auto;
+    display: grid;
+    grid-template-rows: 1fr 8fr 1fr;
+}
+
+main{
+    overflow: scroll;
+}
+
+/* Navigation section */
+.nav-bar li{
+    list-style: none;
+    justify-self: center;
+}
+
+.nav-content{
+    margin-top: 5px;
+    display: grid; 
+    grid-template-rows: 40px auto;
+}
+
+.nav-content p{
+    margin: 0;
+    justify-self: center;
+    font-size: 0.7rem;
+}
+
+.nav-content img{
+    justify-self: center;
+}
+
+.nav-bar ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 0;
+    padding: 0; 
+}
+
+.nav-bar{
+    background-color: darkgray;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-top: 1px solid black;
+}
+
+
+.nav-bar img{
+    height: 40px;
+    width: 40px;
+}
+
+/*  Header Section */
+#main-header{
+    background-color: darkgray;
+    font-size: 0.8rem;
+    border-bottom: 1px solid black;
+    text-align: center;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/innstillinger.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app-container">
+        <header id="main-header">
+            <h1>Innstillinger</h1>
+        </header>
+
+        <main>
+
+            <section id="profile-section">
+                <div id="profile-img"></div>
+                <ul id="personal-info">
+                    <li id="name"><p>{{ name }}</p></li>
+                    <li><p>{{ dob }}</p></li>
+                </ul>
+            </section>
+
+        </main>
+
+        <section class="nav-bar">
+            <ul>
+            <li><a class="nav-content" href="home.html"><img src="images/home.png" alt=""><p>Hjem</p></a></li>
+            <li><a class="nav-content" href="kart.html"><img src="images/map.png" alt=""><p>Kart</p></a></li>
+            <li><a class="nav-content" href="favoritter.html"><img src="images/favorites.png" alt=""><p>Favoritter</p></a></li>
+            <li><a class="nav-content" href="innstillinger.html"><img src="images/settings.png" alt=""><p>Innstillinger</p></a></li>   
+        </ul>
+        </section>
+    </div>
+ 
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="scripts/Instillinger/settings.js"></script>
+
+</body>
+</html>
