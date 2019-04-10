@@ -14,10 +14,74 @@
     
 }
 
+#info-img{
+    fill: black;
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
 main{
     overflow: scroll;
+    scrollbar-width: none;
     
 }
+
+.dropdown{
+    display: grid;
+    grid-template-columns: 1fr 4fr  ;
+    
+    border-bottom: 2px solid black;
+}
+
+#info{
+    
+    padding-left: 10px;
+    font-size: 12px;
+    background-color: lightcyan;
+    
+    
+}
+
+
+
+#tid{
+    border-right: 1px solid black;
+    text-align: center;
+    background-color: lightblue;
+    width: 81px;
+    
+}
+
+.dropdown p{
+    margin-bottom: 2px;
+    margin-top: 6px;
+}
+
+.show-dropdown p{
+    margin: 2px;
+    font-size: 10px;
+    text-align: center;
+}
+
+.show-dropdown{
+    padding-top: 50%;
+}
+
+.show-dropdown:hover{
+    cursor: pointer;
+    
+}
+
+.favoritter{
+    background-color: lightblue;
+    font-size: 12px;
+    text-align: center;
+    border-top: 1px dotted rgba(0, 0, 0, 0.295);
+    padding-top: 5px;
+}
+
 
 
 
@@ -26,33 +90,39 @@ main{
     height: 20px;
     width: 20px;
     align-self: center;
+    
 }
 
-.parking-article li{
-    border-bottom: 1px solid black;
+.parking-info{
+    border-top: 1px solid black;
     list-style: none;
     display: grid;
-    grid-template-columns: 4fr 8fr 4fr 2fr;
+    grid-template-columns: 3.2fr 7fr 4fr 2fr;
     align-self: center;
     text-align: center;
-    padding: 9px;
+    height: 90px;
     background-color: lightcyan;
     
 }
 
 #street-name{
     align-self: center;
+    text-align: left;
+    padding-left: 10px;
     margin: 0px;
     padding-top: 15px;
     padding-bottom: 15px;
 }
 
 #meters-to{
-    background-color: lightblue;
-    margin: 0px;
-    padding-top: 15px;
-    padding-bottom: 15px;
     align-self: center;
+    padding-top: 19%;
+
+}
+
+#meter{
+    background-color: lightblue;
+    border-right: 1px solid black;
 
 }
 
@@ -61,7 +131,7 @@ main{
 #total-space{
     display: grid;
     grid-template-columns: 1fr;
-     font-size: 14px;
+    font-size: 14px;
     display: inline-flex;
     align-self: center; 
 }
@@ -70,4 +140,11 @@ main{
     margin: 0px;
     padding: 0px;
 }
+
+.fav-img{
+    fill: yellow;
+    
+    
+}
+
 

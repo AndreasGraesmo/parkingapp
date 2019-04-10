@@ -1,116 +1,153 @@
 let main = new Vue({
     el: "main",
     data:{
-        
-        styleObject:  
-            
+        styleObjectRed:
+            {color: 'red'}, 
+        styleObjectGreen:  
             {color: 'green'}, 
+            
         
         parking: [
             {   id: 1, 
-                meterNum: 20, 
+                meterNum: 280, 
                 meters: "m",
-                streetName: "Hegdehausveien 30", 
-                freeSpace:2, 
-                totalSpace:"10",
-                    tid: "2 min",
-                    type: "Elbil - P",
-                    pris: "2 timer gratis"
+                streetName: "Breigata 3-5", 
+                freeSpace:78, 
+                totalSpace:"207",
+                tid: "6 min",
+                anlegg: "P-hus",
+                type: "Korttidsparkering mot avgift og langtidsleie",
+                pris: "kr. 27,- pr. påbegynte 30 min",
+                open: "Døgnåpent",
+                El: "Ladepunkter for Elbil",
+                    
+                    
+                    
                  },
             
             {   id: 2, 
-                meterNum: 110, 
+                meterNum: 300, 
                 meters: "m",
-                streetName: "Søndre Gate 6", 
-                freeSpace:8, 
-                totalSpace:"15"  ,
-                    tid: "2 min",
-                    type: "Elbil - P",
-                    pris: "2 timer gratis"},
+                streetName: "Chr. Krohgs gate 1", 
+                freeSpace:289, 
+                totalSpace:"395"  ,
+                   tid: "7 min",
+                    anlegg: "P-hus",
+                    type: "Korttidsparkering mot avgift og langtidsleie",
+                    pris: "kr. 64,- pr. time",
+                    open: "Døgnåpent",
+                    El: "Ladepunkter for Elbil" },
 
             {   id: 3, 
-                meterNum: 160, 
-                meters: "m",
-                streetName: "Brenneriveien 9",
-                freeSpace:13, 
-                totalSpace:"30" ,
-                    tid: "2 min",
-                    type: "Elbil - P",
-                    pris: "2 timer gratis" },
+                meterNum: "1,7", 
+                meters: "km",
+                streetName: "Storgata 32",
+                freeSpace:18, 
+                totalSpace:"150" ,
+                    tid: "8 min",
+                    anlegg: "P-hus",
+                    type: "Korttidsparkering mot avgift",
+                    pris: "kr. 79,- pr. time",
+                    open: "Døgnåpent",
+                    El: "Ingen ladepunkter for Elbil", },
 
             {   id: 4, 
-                meterNum: 360, 
-                meters: "m",
-                streetName: "Grønland 3", 
-                freeSpace:20, 
-                totalSpace:"20",
-                    tid: "2 min",
-                    type: "Elbil - P",
-                    pris: "2 timer gratis"  },
+                meterNum: "1,8", 
+                meters: "km",
+                streetName: "Dronning Eufemias gate 6", 
+                freeSpace:90, 
+                totalSpace:"200",
+                    tid: "8 min",
+                    anlegg: "P-hus",
+                    type: "Korttidsparkering mot avgift og langtidsleie",
+                    pris: "kr. 35/pr. påbegynte time",
+                    open: "Døgnåpent",
+                    El: "Ladepunkter for Elbil", },
 
             {   id: 5, 
-                meterNum: 420,
-                 meters: "m",
-                 streetName: "Seilduksgata 17", 
+                meterNum: "2,2",
+                 meters: "km",
+                 streetName: "Pilestredet Park 31", 
                  freeSpace:0,
-                 totalSpace:"8",
-                     tid: "2 min",
-                     type: "Elbil - P",
-                     pris: "2 timer gratis"  },
+                 totalSpace:"18",
+                     tid: "8 min",
+                     anlegg: "P-plass ute",
+                     type: "Korttidsparkering mot avgift",
+                     pris: "kr. 34 pr. time",
+                     open: "Døgnåpent",
+                     El: "Ingen ladepunkter for Elbil", },
 
             {   id: 6, 
-                meterNum: 800, 
-                meters: "m",
-                streetName: "Ullevålsveien 12",
-                freeSpace:16, 
-                totalSpace:"25" ,
-                    tid: "2 min",
-                    type: "Elbil - P",
-                    pris: "2 timer gratis" },
+                meterNum: "2,4", 
+                meters: "km",
+                streetName: "Munkedamsveien 15",
+                freeSpace:212, 
+                totalSpace:"230" ,
+                    tid: "11 min",
+                    anlegg: "P-hus",
+                    type: "Korttidsparkering mot avgift og langtidsleie",
+                    pris: "kr. 45/pr. pågebynte time",
+                    open: "Døgnåpent",
+                    El: "Ladepunkter for Elbil", },
 
             {   id: 7,
-                 meterNum: 1, 
+                 meterNum: "2,6", 
                  meters: "km",
-                 streetName: "Solligata 2", 
+                 streetName: "Essendrops gate 5", 
                  freeSpace:23, 
-                 totalSpace:"40" ,
-                     tid: "2 min",
-                     type: "Elbil - P",
-                     pris: "2 timer gratis"  },
+                 totalSpace:"160" ,
+                     tid: "16 min",
+                     anlegg: "P-hus",
+                     type: "Korttidsparkering mot avgift og langtidsleie",
+                     pris: "kr. 40 pr. time",
+                     open: "06:00-Midnatt",
+                     El: "Ladepunkter for Elbil",},
 
             {   id: 8, 
-                meterNum: 2, 
+                meterNum: "4,3", 
                 meters: "km",
-                streetName: "Niels Juels Gate 29", 
+                streetName: "Fridtjof Nansens vei 17-19", 
                 freeSpace:0, 
-                totalSpace:"20" ,
-                    tid: "2 min",
-                    type: "Elbil - P",
-                    pris: "2 timer gratis" },
+                totalSpace:"30" ,
+                    tid: "16 min",
+                    anlegg: "P-plass ute",
+                    type: "Korttidsparkering mot avgift",
+                    pris: "kr. 30 pr. time",
+                    open: "Døgnåpent",
+                    El: "Ingen ladepunkter for Elbil", },
         ]
    
     },
 
-   
+    
 });
 
+$( document ).ready(function(){
 
-$(function(){
-    
+    $(function(){
+            $(".dropdown-list").hide();
 
-    $( ".show-dropdown" ).on("click", function(){
+            $('.info-img-fill').toggle();
+
+        $( ".show-dropdown" ).on("click", function(){
+           
+            $(this).parent().next(".dropdown-list").toggle().css({borderTop: "1px dotted rgba(0, 0, 0, 0.295)"})
+            $(this).children().closest('.info-img-fill').toggle('.info-img');
+            $(this).children().closest('.info-img').toggle('.info-img-fill');
+            
+            
+            
+        })
         
-            $(".dropdown").show();
+
+    });
+
+    $('.fav-img-fill').toggle();
+
+    $('.favoritter').on("click", function() {
+        $(this).children().closest('.fav-img-fill').toggle('.fav-img');
+        $(this).children().closest('.fav-img').toggle('.fav-img-fill')
         
-    })
-    
+    });
 
 });
-
-
-$(function(){
-    let freeSpace = 0;
-    if(freeSpace = 0){
-    $("#green").css({color: "red"});
-    }
-})

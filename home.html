@@ -20,26 +20,52 @@
     <main>
      <article class="parking-article" v-for="(item, index) in parking" :key="index">
                     <ul>
-                        <li>
+                        <li class="parking-info">
+                            <div id="meter">
                             <h3 id="meters-to"><img src="images/pin.png">{{item.meterNum}}{{item.meters}}</h3>
+                            </div>
+                        
                             <p id="street-name"><img src="images/location.png" alt="">{{item.streetName}}</p>
                             <div id="total-space">
-                              <p id="green" v-bind:style="styleObject" >Ledig: {{item.freeSpace}} </p><p> /{{item.totalSpace}}</p>
-                            </div>
-
-                           <p class="show-dropdown"><button> <img src="images/info.png" alt="">mer info</button></p>
-                        </li>
-                    </ul>
+                              <p id="green" v-if="item.freeSpace > 0" v-bind:style="styleObjectGreen" >Ledig: {{item.freeSpace}} </p> <p v-else="item.freeSpace = 0" v-bind:style="styleObjectRed">Ledig: {{item.freeSpace}}</p><p> /{{item.totalSpace}}</p>
                            
-                    <div class="dropdown" >
-                          
-                                <p>{{item.tid}}</p>
-                                <img src="images/car.png" alt="">
-                                    <p>{{item.type}}</p>
-                                    <p>{{item.pris}}</p>
-                             
-                    </div>        
-                        
+                            </div>
+                           <a class="show-dropdown" >
+                               <img class="info-img" src="images/info.png" alt=""> 
+                               <img class="info-img-fill" src="images/infoFill.png" alt="">
+                               <p>info</p></a>
+                        </li>
+
+                        <li class="dropdown-list">     
+                                <div class="dropdown" >
+                                        <div id="tid">
+                                        <p>{{item.tid}}</p>
+                                        <p>-</p>
+                                        <img src="images/car.png" alt="">
+                                       
+                                        <div class="favoritter">
+                                                <img class="fav-img" src="images/favorites.png" alt="">
+                                                <img class="fav-img-fill" src="images/favoritesFill.png" alt=""><p>Legg til favoritter </p>  
+                                              
+                                            </div>
+                                        </div>
+                                        
+                                        <div id="info">
+                                            
+                                            <p> <img src="images/el.png" alt=""> {{item.El}}</p><br>
+                                            <p>-<strong> Type:</strong> {{item.anlegg}}</p>
+                                            <p>-<strong> Betaling:</strong> {{item.type}}</p>
+                                            <p>-<strong> Pris:</strong> {{item.pris}}</p>
+                                            <p>-<strong> Åpen:</strong> {{item.open}}</p>
+                                            
+                                            
+                                           
+                                        </div>
+                                       
+                                </div>        
+                            </li>  
+                    </ul>
+                      
                     
                 </article>
     </main>

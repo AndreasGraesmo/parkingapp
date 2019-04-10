@@ -32,16 +32,21 @@ body{
     margin-top: 5px;
     display: grid; 
     grid-template-rows: 40px auto;
+    text-decoration: none;
 }
 
 .nav-content p{
     margin: 0;
     justify-self: center;
     font-size: 0.7rem;
+    color: black;
 }
+
+
 
 .nav-content img{
     justify-self: center;
+    
 }
 
 .nav-bar ul{
@@ -49,6 +54,8 @@ body{
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin: 0;
     padding: 0; 
+    
+    
 }
 
 .nav-bar{
@@ -56,6 +63,7 @@ body{
     border-bottom-right-radius: 4px;
     border-bottom-left-radius: 4px;
     border-top: 1px solid black;
+    
 }
 
 
@@ -72,5 +80,5 @@ body{
     text-align: center;
     border-top-right-radius: 4px;
     border-top-left-radius: 4px;
-
 }
+

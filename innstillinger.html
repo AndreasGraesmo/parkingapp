@@ -29,37 +29,60 @@
                 <h3 id="settings-title">INNSTILLINGER</h3>
 
                 <ul id="settings-list">
-                    <li>
+                    <li class="settings-li">
                         <a class="settings-link" href="#"><p>
                             <span class="settings-list-icon"><i class="far fa-credit-card"></i></span>
                             <span class="settings-list-text">Betaling</span>
-                            <span class="settings-list-icon right"><i class="fas fa-arrow-right"></i></span>
+                            <span class="settings-list-icon right"><i class="fas fa-sort-down"></i></span>
                         </p></a>
                     </li>
 
-                    <li>
-                        <a class="settings-link" href="#"><p>
-                            <span class="settings-list-icon"><i class="far fa-map"></i></span>
-                            <span class="settings-list-text">Kart</span>
-                            <span class="settings-list-icon right"><i class="fas fa-arrow-right"></i></span>
-                        </p></a>
+                    <li class="content-li">
+                        <div class="content-box" id="pay-content">
+                            <ul class="content-list">
+                                <li><img class="payment-img" src="images/paypal.png"> <input class="pay-radio" type="radio" name="pay-radio"></li>
+                                <li><img class="payment-img" src="images/visa.png"> <input class="pay-radio" type="radio" name="pay-radio"></li>
+                            </ul>
+                        </div>
                     </li>
 
-                    <li>
+                    <li class="settings-li">
                         <a class="settings-link" href="#"><p>
                             <span class="settings-list-icon"><i class="fas fa-car"></i></span>
-                            <span class="settings-list-text">Biler</span>
-                            <span class="settings-list-icon right"><i class="fas fa-arrow-right"></i></span>
+                            <span class="settings-list-text">Kjøretøy</span>
+                            <span class="settings-list-icon right"><i class="fas fa-sort-down"></i></span>
                         </p></a>
                     </li>
 
-                    <li>
+                    <li class="content-li">
+                        <div class="content-box" id="car-content">
+                            <label>Reg.Nr:</label>
+                            <input type="text" id="reg-text" placeholder="AB12345...">
+                            <p>Skriv inn registreringsnummer på kjøretøyet så fikser vi resten.</p>
+                        </div>
+                    </li>
+
+                    <li class="settings-li">
                         <a class="settings-link" href="#"><p>
                             <span class="settings-list-icon"><i class="far fa-question-circle"></i></span>
                             <span class="settings-list-text">Om appen</span>
-                            <span class="settings-list-icon right"><i class="fas fa-arrow-right"></i></span>
+                            <span class="settings-list-icon right"><i class="fas fa-sort-down"></i></span>
                         </p></a>
                     </li>
+
+                    <li class="content-li">
+                        <div class="content-box" id="about-content">
+                            <p>Parkeringär er en app som skal hjelpe deg til å spare tid ved å enklere finne frem til parkeringsplasser. Utviklet av Nnaemeka, Fabian og Andreas.</p>
+                        </div>
+                    </li>
+
+                    <li class="settings-li">
+                        <a class="settings-link" href="/index.html"><p>
+                            <span class="settings-list-icon"><i class="fas fa-sign-out-alt"></i></span>
+                            <span class="settings-list-text">Logg ut</span>
+                        </p></a>
+                    </li>
+
                 </ul>
             </section>
 
@@ -76,7 +99,9 @@
     </div>
  
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="scripts/Innstillinger/settings.js"></script>
+    <script src="scripts/JQuery/jquery-3.3.1.min.js"></script>
+    <script src="scripts/JQuery/jquery-ui.min.js"></script>
+    <script src="scripts/Innstillinger/innstillinger.js"></script>
 
 </body>
 </html>

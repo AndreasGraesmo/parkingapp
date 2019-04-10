@@ -1,3 +1,12 @@
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+main{
+    overflow: scroll;
+    scrollbar-width: none;  
+}
+
 #profile-section{
     display: flex;
     margin: 1rem;
@@ -7,7 +16,9 @@
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background-color: #666;
+    background-image: url("../images/pb.jpg");
+    background-size: 100%;
+    background-position: center;
 }
 
 #personal-info{
@@ -45,11 +56,11 @@
     padding: 0;
 }
 
-#settings-list li {
+.settings-li {
     border-bottom: solid rgba(0,0,0,0.27) 1px;
 }
 
-#settings-list li:nth-last-child(1){
+.settings-li:nth-last-child(1){
     border-bottom: none
 }
 
@@ -69,6 +80,7 @@
 .settings-list-icon {
     color: rgba(0,0,0,0.47);
     position: relative;
+    transition: 0.3s;
 }
 
 .settings-list-text {
@@ -80,3 +92,48 @@
     float: right;
 }
 
+
+/*HIDDEN CONTENT*/
+
+.content-li{
+    border: none;
+    display: none;
+    margin: 10px 0;
+}
+
+.content-box{
+    width: 100%;
+}
+
+.content-list{
+    list-style: none;
+}
+
+.payment-img{
+    height: 20px;
+    margin: 10px 0;
+}
+
+.pay-radio{
+    float:right;
+    margin-top:15px
+}
+
+.rotate{
+    transform: rotate(180deg);
+}
+
+#reg-text {
+    height: 20px;
+    font-size: 0.9rem;
+    box-shadow: 1px 1px 2px rgba(0,0,0, 0.1);
+    border: none;
+    border-radius: 3px;
+    padding:0 0 0 10px;
+}
+
+#about-content, #car-content p{
+    font-style: italic;
+    font-size: 0.7 rem;
+    color: rgba(0,0,0,0.9);
+}
