@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="/css/jquery-ui.min.css">
     <title>Home</title>
 </head>
 <body>
@@ -23,11 +24,24 @@
                             <h3 id="meters-to"><img src="images/pin.png">{{item.meterNum}}{{item.meters}}</h3>
                             <p id="street-name"><img src="images/location.png" alt="">{{item.streetName}}</p>
                             <div id="total-space">
-                              <p id="green">Ledig: {{item.freeSpace}} </p><p> /{{item.totalSpace}}</p>
+                              <p id="green" v-bind:style="styleObject" v-show="item.freeSpace > 0 ">Ledig: {{item.freeSpace}} </p><p> /{{item.totalSpace}}</p>
                             </div>
-                            <img src="images/info.png" alt="">
-                        </li>
-                    </ul>
+                           <p class="show-dropdown"><button> <img src="images/info.png" alt="">mer info</p>
+
+                            <div class="dropdown" v-for="(item, index) in dropdown" :key="index">
+                                
+                                <p>{{item.tid}}</p>
+                                <img src="" alt="">
+                                    <p>{{item.type}}</p>
+                                    <p>{{item.pris}}</p>
+                               </div>
+                           </li>
+
+                           
+                        </ul>
+                            
+                        
+                    
                 </article>
     </main>
     <section class="nav-bar">
@@ -39,6 +53,8 @@
         </ul>
     </section>
 </div>
+<script src="/scripts/JQuery/jquery-3.3.1.min.js"></script>
+<script src="/scripts/JQuery/jquery-ui.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="scripts/Home/home.js"></script>
     
