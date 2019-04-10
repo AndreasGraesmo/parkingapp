@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,23 +9,52 @@
     <link rel="stylesheet" href="css/kart.css">
     <title>Kart</title>
 </head>
+
 <body>
     <div id="app-container">
         <header id="main-header">
             <h1>{{ kart }}</h1>
         </header>
-        <main></main>
+        <main id="map"></main>
         <section class="nav-bar">
-                <ul>
-                    <li><a class="nav-content" href="home.html"><img src="images/home.png" alt=""><p>Hjem</p></a></li>
-                    <li><a class="nav-content" href="kart.html"><img src="images/map.png" alt=""><p>Kart</p></a></li>
-                    <li><a class="nav-content" href="favoritter.html"><img src="images/favorites.png" alt=""><p>Favoritter</p></a></li>
-                    <li><a class="nav-content" href="innstillinger.html"><img src="images/settings.png" alt=""><p>Innstillinger</p></a></li>   
-                </ul>
+            <ul>
+                <li><a class="nav-content" href="home.html"><img src="images/home.png" alt="">
+                        <p>Hjem</p>
+                    </a></li>
+                <li><a class="nav-content" href="kart.html"><img src="images/map.png" alt="">
+                        <p>Kart</p>
+                    </a></li>
+                <li><a class="nav-content" href="favoritter.html"><img src="images/favorites.png" alt="">
+                        <p>Favoritter</p>
+                    </a></li>
+                <li><a class="nav-content" href="innstillinger.html"><img src="images/settings.png" alt="">
+                        <p>Innstillinger</p>
+                    </a></li>
+            </ul>
         </section>
     </div>
-    
+
+    <script>
+        let map;
+        let marker;
+        let trafficLayer;
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: { lat: 59.911491, lng: 10.757933 }
+            });
+            marker = new google.maps.Marker({
+                position: { lat: 59.911491, lng: 10.757933 },
+                map: map
+                //icon: 'images/pin.png'
+            });
+            trafficLayer = new google.maps.TrafficLayer().setMap(map);
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBz6XHDo2ryIZel3f86IceSgh-92Ja2kAc&callback=initMap"
+        async defer></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="scripts/Kart/app.js"></script>
 </body>
+
 </html>
