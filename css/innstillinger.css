@@ -49,6 +49,11 @@
     color: #000;
     text-decoration: none;
     font-size: 1.1rem;
+    padding: 20px 0;
+}
+
+#settings-list li a p{
+    margin: 0;
 }
 
 .settings-list-icon {

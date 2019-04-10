@@ -21,6 +21,10 @@ body{
     grid-template-rows: 1fr 8fr 1fr;
 }
 
+main{
+    overflow: scroll;
+}
+
 /* Navigation section */
 .nav-bar li{
     list-style: none;
