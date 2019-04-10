@@ -5,3 +5,7 @@ new Vue({
         dob: '21.12.1998'
     }
 });
+
+$('.settings-link').click(function(){
+alert();
+});

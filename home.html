@@ -24,22 +24,21 @@
                             <h3 id="meters-to"><img src="images/pin.png">{{item.meterNum}}{{item.meters}}</h3>
                             <p id="street-name"><img src="images/location.png" alt="">{{item.streetName}}</p>
                             <div id="total-space">
-                              <p id="green" v-bind:style="styleObject" v-show="item.freeSpace > 0 ">Ledig: {{item.freeSpace}} </p><p> /{{item.totalSpace}}</p>
+                              <p id="green" v-bind:style="styleObject" >Ledig: {{item.freeSpace}} </p><p> /{{item.totalSpace}}</p>
                             </div>
-                           <p class="show-dropdown"><button> <img src="images/info.png" alt="">mer info</p>
 
-                            <div class="dropdown" v-for="(item, index) in dropdown" :key="index">
-                                
+                           <p class="show-dropdown"><button> <img src="images/info.png" alt="">mer info</button></p>
+                        </li>
+                    </ul>
+                           
+                    <div class="dropdown" >
+                          
                                 <p>{{item.tid}}</p>
-                                <img src="" alt="">
+                                <img src="images/car.png" alt="">
                                     <p>{{item.type}}</p>
                                     <p>{{item.pris}}</p>
-                               </div>
-                           </li>
-
-                           
-                        </ul>
-                            
+                             
+                    </div>        
                         
                     
                 </article>

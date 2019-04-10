@@ -45,15 +45,25 @@
     padding: 0;
 }
 
-#settings-list li a{
+#settings-list li {
+    border-bottom: solid rgba(0,0,0,0.27) 1px;
+}
+
+#settings-list li:nth-last-child(1){
+    border-bottom: none
+}
+
+.settings-link{
     color: #000;
     text-decoration: none;
     font-size: 1.1rem;
-    padding: 20px 0;
+    padding: 10px 0;
 }
 
-#settings-list li a p{
+.settings-link p{
     margin: 0;
+    padding: 10px 0;
+    
 }
 
 .settings-list-icon {
