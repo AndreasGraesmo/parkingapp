@@ -38,36 +38,107 @@
         let map;
         let marker;
         let trafficLayer;
-        let infoWindow;
         function initMap() {
             map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 15,
-                center: { lat: 59.911491, lng: 10.757933 }
+                zoom: 12.2,
+                center: { lat: 59.914110, lng: 10.760706 }
             });
-            marker = new google.maps.Marker({
-                position: { lat: 59.911491, lng: 10.757933 },
-                map: map
-                //icon: 'images/pin.png'
-            });
+            //Traffic
             trafficLayer = new google.maps.TrafficLayer().setMap(map);
 
-            infoWindow = new google.maps.InfoWindow;
+            // if (navigator.geolocation) {
+            //     navigator.geolocation.getCurrentPosition(function (position) {
+            //         let pos = {
+            //             lat: position.coords.latitude,
+            //             lng: position.coords.longitude
+            //         };
+            //         infoWindow.setPosition(pos);
+            //         infoWindow.setContent('Her er du');
+            //         infoWindow.open(map);
+            //         map.setCenter(pos);
+            //     });
+            // }
 
-            if(navigator.geolocation){
-                navigator.geolocation.getCurrentPosition(function(position){
-                    let pos = {
-                        lat: position.coords.latitude,
-                        lng: position.coords.longitude
-                    };
-                    infoWindow.setPosition(pos);
-                    infoWindow.setContent('Her er du');
-                    infoWindow.open(map);
-                    map.setCenter(pos);
+            // let arrMarker = [
+            //     { lat: 59.914110, lng: 10.760706 }, '<h1>#Oslo</h1>'
+            // ]
+
+            //Breigata 3-5
+            addMarker({
+                coords: { lat: 59.914110, lng: 10.760706 },
+                content: '<h1>Breigata 3-5</h1>'
+            });
+            //Chris Krogs gate 1
+            addMarker({
+                coords: { lat: 59.914623, lng: 10.757571 },
+                content: '<h1>Chris Krogs gate 1</h1>'
+            });
+            //Storgata 32
+            addMarker({
+                coords: { lat: 59.913916, lng: 10.753607 },
+                content: '<h1>Storgata 32</h1>'
+            });
+            //Dronning Eufemias gate 6
+            addMarker({
+                coords: { lat: 59.909250, lng: 10.754866 },
+                content: '<h1>Dronning Eufemias gate 6</h1>'
+            });
+            //Pilestredet Park 31
+            addMarker({
+                coords: { lat: 59.919809, lng: 10.738845 },
+                content: '<h1>Pilestredet Park 31</h1>'
+            });
+            //Munkedamsveien 15
+            addMarker({
+                coords: { lat: 59.913066, lng: 10.728248 },
+                content: '<h1>Munkedamsveien 15</h1>'
+            });
+            //Essendrops gate 5
+            addMarker({
+                coords: { lat: 59.928851, lng: 10.709866 },
+                content: '<h1>Essendrops gate 5</h1>'
+            });
+            //Fridtjof Nansens vei 17-19
+            addMarker({
+                coords: { lat: 59.930949, lng: 10.707332 },
+                content: '<h1>Fridtjof Nansens vei 17-19</h1><br><p>text</p>'
+            });
+            // Add Marker Function
+            function addMarker(props) {
+                marker = new google.maps.Marker({
+                    position: props.coords,
+                    content: props.content,
+                    map: map
+
                 });
-            }
-    }
 
-    
+                if (props.content) {
+                    let infoWindow = new google.maps.InfoWindow({
+                        content: props.content
+                    });
+
+                    marker.addListener('click', function () {
+                        infoWindow.open(map, marker);
+
+                    });
+                }
+
+
+            }
+
+
+
+            // google.maps.event.addListener(marker, 'click', function () {
+            //     lastWindow = null;
+            //     if (lastWindow) lastWindow.close();
+            //     this.infowindow.open(map, this);
+            //     lastWindow = infowindow;
+            // });
+
+
+        }
+
+
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBz6XHDo2ryIZel3f86IceSgh-92Ja2kAc&callback=initMap"
         async defer></script>
